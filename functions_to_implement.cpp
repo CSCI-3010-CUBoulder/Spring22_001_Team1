@@ -1,5 +1,5 @@
 /* String functions section */
-
+#include <catch2/catch_test_macros.hpp>
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
 // Make changes
@@ -102,6 +102,11 @@ double Sign(double num){
     }
 }
 
+TEST_CASE( "Sign of number is computed", "[sign]" ) {
+    REQUIRE( Sign(-1.0) == -1 );
+    REQUIRE( Sign(1.0) == 1 );
+}
+
 
 // adds n to each element of the vector
 std::vector<int> AddN(std::vector<int>, int n){
@@ -110,6 +115,11 @@ std::vector<int> AddN(std::vector<int>, int n){
         result.push_back(v[i] + n);
     }
     return result;
+}
+
+TEST_CASE( "Add n to each element of vector", "[addn]" ) {
+    vector<int> v = {1, 2, 3, 4, 5};
+    REQUIRE( Factorial(v) == 15 );
 }
 
 // adds n to each element of the vector
