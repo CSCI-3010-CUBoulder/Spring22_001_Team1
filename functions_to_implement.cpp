@@ -113,7 +113,7 @@ double Sign(double num){
 // adds n to each element of the vector
 std::vector<int> AddN(std::vector<int>, int n){
     std::vector<int> result;
-    for (int i = 0; i < result.size(); i++){
+    for (long unsigned int i = 0; i < result.size(); i++){
         result.push_back(result[i] + n);
     }
     return result;
