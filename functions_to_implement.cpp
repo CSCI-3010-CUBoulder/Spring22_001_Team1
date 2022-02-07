@@ -1,5 +1,7 @@
 /* String functions section */
-#include <catch2/catch_test_macros.hpp>
+#include <iostream>
+#include <string>
+#include <vector>
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
 // Make changes
@@ -111,8 +113,8 @@ double Sign(double num){
 // adds n to each element of the vector
 std::vector<int> AddN(std::vector<int>, int n){
     std::vector<int> result;
-    for (int i = 0; i < v.size(); i++){
-        result.push_back(v[i] + n);
+    for (int i = 0; i < result.size(); i++){
+        result.push_back(result[i] + n);
     }
     return result;
 }
