@@ -31,4 +31,5 @@ TEST_CASE("incrementing values in integer vector", "[addN]"){
 		REQUIRE( res[v.size()-1] == 5 );
 		REQUIRE(res[random] == v[random]+n);
 	}
+}
 	
